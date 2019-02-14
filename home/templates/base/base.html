@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carator</title>
+    <link href="{% static 'materialize/css/materialize.min.css' %}" rel="stylesheet">
+    {% block styles %}
+    {% endblock %}
+</head>
+<body>
+  {#<div class="page-loader">#}
+  {#    <div class="loader">Loading...</div>#}
+  {#</div>#}
+  {% include 'home/../base/nav.html' %}
+    <div class="container">
+            <!-- Page Content goes here -->
+            {% block content %}
+            {% endblock %}
+    </div>
+    {% include 'home/../base/footer.html' %}
+</body>
