@@ -15,7 +15,7 @@ def special(request):
 @login_required
 def user_logout(request):
     logout(request)
-    return HttpResponseRedirect(reverse('index'))
+    return render(request,'registration/logout.html')
 
 def register(request):
     registered = False

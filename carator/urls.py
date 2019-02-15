@@ -19,8 +19,8 @@ from django.contrib.auth import views
 
 
 urlpatterns = [
-    url(r'admin/', admin.site.urls),
-    url(r'accounts/',include('registration.urls')),
-    # path('^home/', include('home.urls')),
-    url(r'^', include('home.urls')),
+    url(r'^admin/', admin.site.urls),
+    url(r'^accounts/',include('registration.urls')),
+    url(r'^carator/', include('home.urls')),
+    url(r'^$', include('home.urls')),
 ]

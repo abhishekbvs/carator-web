@@ -6,19 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carator</title>
-    <link href="{% static 'materialize/css/materialize.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     {% block styles %}
     {% endblock %}
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
 </head>
 <body>
-  {#<div class="page-loader">#}
-  {#    <div class="loader">Loading...</div>#}
-  {#</div>#}
   {% include 'home/../base/nav.html' %}
-    <div class="container">
+  <div class="container">
             <!-- Page Content goes here -->
             {% block content %}
             {% endblock %}
-    </div>
-    {% include 'home/../base/footer.html' %}
+  </div>
+  {% include 'home/../base/footer.html' %}
 </body>
