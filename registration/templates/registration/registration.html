@@ -5,19 +5,18 @@
 {% if registered %}
   <h1>Thank you for registering!</h1>
 {% else %}
-<div class="row">
-  <h3>Register Here</h3>
-</div>
-<div class="row">
-  <h6>Just fill out the form.</h6>
-</div>
+
 <div class ="row">
+  <div class="col-3"></div>
   <div class="col-6">
+    <div class="row"> <h3>Register Here</h3> </div>
+    <div class="row"> <h6>Just fill out the form.</h6></div>
+    <br>
     <form enctype="multipart/form-data" method="POST">
             {% csrf_token %}
-            {{ user_form.as_p}}
-            {{ profile_form.as_p }}
-            <button type="submit" class="btn btn-success"name="" value="Register">Submit</button>
+            {{ user_form|crispy }}
+            {{ profile_form|crispy }}
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
           </form>
   </div>
 </div>
